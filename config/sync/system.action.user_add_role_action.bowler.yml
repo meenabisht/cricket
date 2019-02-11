@@ -1,0 +1,14 @@
+uuid: 8a3b1b7c-8d89-4574-b3af-1510f0017f12
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bowler
+  module:
+    - user
+id: user_add_role_action.bowler
+label: 'Add the Bowler role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: bowler

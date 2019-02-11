@@ -1,0 +1,21 @@
+uuid: fae36848-e0ab-4119-b908-40186cdef579
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_match_starting
+    - node.type.matches_details
+  module:
+    - datetime
+id: node.matches_details.field_match_starting
+field_name: field_match_starting
+entity_type: node
+bundle: matches_details
+label: 'Match Starting'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

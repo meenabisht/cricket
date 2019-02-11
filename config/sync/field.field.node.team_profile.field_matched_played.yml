@@ -1,0 +1,23 @@
+uuid: 5ea46569-a915-4bf8-bd30-21cbbee7a994
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_matched_played
+    - node.type.team_profile
+id: node.team_profile.field_matched_played
+field_name: field_matched_played
+entity_type: node
+bundle: team_profile
+label: 'Matched Played'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

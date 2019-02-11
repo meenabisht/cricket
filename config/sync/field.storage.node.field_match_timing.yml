@@ -1,0 +1,20 @@
+uuid: 64cfd6e9-de65-47a1-b78e-2d064cd7d0a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_match_timing
+field_name: field_match_timing
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

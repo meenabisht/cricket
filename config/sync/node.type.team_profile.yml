@@ -1,0 +1,18 @@
+uuid: d625eb85-3df0-4b00-8ace-a3a0dfa82529
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Team Profile'
+type: team_profile
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,11 @@
+uuid: d9c87ac9-2586-43dc-ac70-b613a9c75468
+langcode: en
+status: true
+dependencies: {  }
+id: captain
+label: Captain
+weight: 5
+is_admin: null
+permissions:
+  - 'create article content'
+  - 'create players_details content'

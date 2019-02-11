@@ -1,0 +1,14 @@
+uuid: 8ef74779-a466-4c47-80bb-5acb7b9d6751
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.batsman
+  module:
+    - user
+id: user_remove_role_action.batsman
+label: 'Remove the Batsman role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: batsman

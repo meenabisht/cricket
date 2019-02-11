@@ -1,0 +1,14 @@
+uuid: 0ffdd6a6-d261-4669-9bb1-d54078ae3617
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.batsman
+  module:
+    - user
+id: user_add_role_action.batsman
+label: 'Add the Batsman role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: batsman

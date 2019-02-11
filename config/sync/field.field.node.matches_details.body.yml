@@ -1,0 +1,22 @@
+uuid: 8f2219ca-bc75-405b-954e-a79273d42f34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.matches_details
+  module:
+    - text
+id: node.matches_details.body
+field_name: body
+entity_type: node
+bundle: matches_details
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

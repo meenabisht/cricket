@@ -1,0 +1,14 @@
+uuid: 93cd89b3-c207-4b52-8732-f3dc3afef604
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.bowler
+  module:
+    - user
+id: user_remove_role_action.bowler
+label: 'Remove the Bowler role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: bowler

@@ -1,0 +1,14 @@
+uuid: 9efd2be8-b018-451e-bbcb-ac5b5e22593a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.captain
+  module:
+    - user
+id: user_remove_role_action.captain
+label: 'Remove the Captain role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: captain
