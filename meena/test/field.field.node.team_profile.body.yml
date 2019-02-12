@@ -1,0 +1,22 @@
+uuid: 577c979a-51ab-43a2-8c7c-52d70d774680
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.team_profile
+  module:
+    - text
+id: node.team_profile.body
+field_name: body
+entity_type: node
+bundle: team_profile
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

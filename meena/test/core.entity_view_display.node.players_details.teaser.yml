@@ -1,0 +1,90 @@
+uuid: 842401de-33de-4a17-a962-b2a7e54818fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.players_details.body
+    - field.field.node.players_details.field_debut_match
+    - field.field.node.players_details.field_debut_year
+    - field.field.node.players_details.field_highest_score
+    - field.field.node.players_details.field_lowest_score
+    - field.field.node.players_details.field_matches_played
+    - field.field.node.players_details.field_scored_till_date
+    - node.type.players_details
+  module:
+    - datetime
+    - text
+    - user
+id: node.players_details.teaser
+targetEntityType: node
+bundle: players_details
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_debut_match:
+    type: string
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_debut_year:
+    type: datetime_default
+    weight: 3
+    region: content
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  field_highest_score:
+    type: number_integer
+    weight: 4
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_lowest_score:
+    type: number_integer
+    weight: 5
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_matches_played:
+    type: number_integer
+    weight: 6
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_scored_till_date:
+    type: number_integer
+    weight: 7
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

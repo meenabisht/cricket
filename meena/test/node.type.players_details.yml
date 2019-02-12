@@ -1,0 +1,18 @@
+uuid: a4694c88-d3ea-40ea-9b37-00ca201a70a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Players Details'
+type: players_details
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

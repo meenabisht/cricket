@@ -1,0 +1,23 @@
+uuid: c3f8ecfc-8a05-4251-b267-4d5613d002b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_highest_score
+    - node.type.players_details
+id: node.players_details.field_highest_score
+field_name: field_highest_score
+entity_type: node
+bundle: players_details
+label: 'Highest Score'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

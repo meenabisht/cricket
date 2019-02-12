@@ -1,0 +1,11 @@
+uuid: f1e137dc-fe62-4010-b78b-62dc90823852
+langcode: en
+status: true
+dependencies: {  }
+id: batsman
+label: Batsman
+weight: 3
+is_admin: null
+permissions:
+  - 'create article content'
+  - 'create players_details content'

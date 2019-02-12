@@ -1,0 +1,23 @@
+uuid: e5701223-34cf-4915-a0a9-a05daa0d2481
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lowest_score
+    - node.type.players_details
+id: node.players_details.field_lowest_score
+field_name: field_lowest_score
+entity_type: node
+bundle: players_details
+label: 'Lowest Score'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

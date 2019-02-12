@@ -1,0 +1,23 @@
+uuid: 7aa3b776-f3bb-49f1-b126-f5e24dad0e90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scored_till_date
+    - node.type.players_details
+id: node.players_details.field_scored_till_date
+field_name: field_scored_till_date
+entity_type: node
+bundle: players_details
+label: 'Scored Till Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

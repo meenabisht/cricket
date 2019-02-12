@@ -1,0 +1,31 @@
+uuid: 914d2bcf-608f-4a4e-8f64-155f0e8d4c52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_player_role
+    - node.type.players_details
+    - taxonomy.vocabulary.batsman
+    - taxonomy.vocabulary.bowlers
+id: node.players_details.field_player_role
+field_name: field_player_role
+entity_type: node
+bundle: players_details
+label: 'Player Role'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      batsman: batsman
+      bowlers: bowlers
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: batsman
+field_type: entity_reference

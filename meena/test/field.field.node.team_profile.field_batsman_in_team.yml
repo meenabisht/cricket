@@ -1,0 +1,33 @@
+uuid: 06262e6e-b88c-4585-92ab-ba48c4506941
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_batsman_in_team
+    - node.type.team_profile
+id: node.team_profile.field_batsman_in_team
+field_name: field_batsman_in_team
+entity_type: node
+bundle: team_profile
+label: 'Batsman In Team'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        batsman: batsman
+        administrator: '0'
+        bowler: '0'
+        captain: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

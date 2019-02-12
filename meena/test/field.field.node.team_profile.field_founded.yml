@@ -1,0 +1,21 @@
+uuid: 42af7448-897c-46f3-a98f-f4f7ef733da4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_founded
+    - node.type.team_profile
+  module:
+    - datetime
+id: node.team_profile.field_founded
+field_name: field_founded
+entity_type: node
+bundle: team_profile
+label: Founded
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

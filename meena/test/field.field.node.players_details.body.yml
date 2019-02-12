@@ -1,0 +1,22 @@
+uuid: 3f5f23f1-8816-45c1-bd99-d145513bd44f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.players_details
+  module:
+    - text
+id: node.players_details.body
+field_name: body
+entity_type: node
+bundle: players_details
+label: 'Player Biodata'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

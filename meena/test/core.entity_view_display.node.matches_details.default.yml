@@ -1,0 +1,50 @@
+uuid: a50b4e9d-8279-49a9-85e8-93817a05da7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.matches_details.body
+    - field.field.node.matches_details.field_match_location
+    - field.field.node.matches_details.field_match_starting
+    - field.field.node.matches_details.field_match_timing
+    - node.type.matches_details
+  module:
+    - datetime
+    - user
+id: node.matches_details.default
+targetEntityType: node
+bundle: matches_details
+mode: default
+content:
+  field_match_location:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_match_starting:
+    weight: 3
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_match_timing:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true

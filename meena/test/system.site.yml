@@ -1,0 +1,14 @@
+uuid: ea041de2-fd96-44b6-b894-d5bc10449b7d
+name: 'Cricket Freakers'
+mail: meena.bisht@qed42.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /player-view
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

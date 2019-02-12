@@ -1,0 +1,23 @@
+uuid: 60973f56-ff61-4556-8b4d-8752ef4c0483
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_matches_played
+    - node.type.players_details
+id: node.players_details.field_matches_played
+field_name: field_matches_played
+entity_type: node
+bundle: players_details
+label: 'Matches Played'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
