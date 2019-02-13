@@ -1,0 +1,33 @@
+uuid: 6e50f866-e1e2-4fd5-9afd-64e5982dccf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_reference
+    - node.type.test_fields
+id: node.test_fields.field_user_reference
+field_name: field_user_reference
+entity_type: node
+bundle: test_fields
+label: 'User Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        batsman: batsman
+        administrator: '0'
+        bowler: '0'
+        captain: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

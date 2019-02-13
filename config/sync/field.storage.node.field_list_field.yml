@@ -1,0 +1,36 @@
+uuid: 1c55bf26-a451-47e8-8ba5-d99a3ed49a9e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_list_field
+field_name: field_list_field
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: BMW
+    -
+      value: '2'
+      label: MERCEDES
+    -
+      value: '3'
+      label: i10
+    -
+      value: '4'
+      label: i20
+    -
+      value: '5'
+      label: TATA
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

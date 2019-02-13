@@ -1,0 +1,28 @@
+uuid: 94e3e975-eb3b-4394-a748-a96029cb9e61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_reference
+    - node.type.players_details
+    - node.type.test_fields
+id: node.test_fields.field_content_reference
+field_name: field_content_reference
+entity_type: node
+bundle: test_fields
+label: 'Content Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      players_details: players_details
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

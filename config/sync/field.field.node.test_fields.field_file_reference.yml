@@ -1,0 +1,27 @@
+uuid: 73d62f58-2b35-4b31-b085-d3b76ef3c619
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_reference
+    - node.type.test_fields
+  module:
+    - file
+id: node.test_fields.field_file_reference
+field_name: field_file_reference
+entity_type: node
+bundle: test_fields
+label: 'File Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

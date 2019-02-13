@@ -1,0 +1,23 @@
+uuid: 45017c3b-8931-455a-96e1-c9d3ae2210ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_field
+    - node.type.test_fields
+  module:
+    - link
+id: node.test_fields.field_link_field
+field_name: field_link_field
+entity_type: node
+bundle: test_fields
+label: 'Link field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

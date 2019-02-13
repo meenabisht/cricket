@@ -1,0 +1,29 @@
+uuid: a657e3ff-518e-4fcb-ba69-46afde88429f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_reference
+    - node.type.test_fields
+    - taxonomy.vocabulary.location
+id: node.test_fields.field_term_reference
+field_name: field_term_reference
+entity_type: node
+bundle: test_fields
+label: 'Term Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

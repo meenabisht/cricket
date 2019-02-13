@@ -1,18 +1,22 @@
-uuid: e061c476-b56e-4420-8bd1-2f1a4a1cd233
+uuid: 51dba5d3-6059-4b1f-9a2d-fb2db3616578
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_batsman_in_team
-    - field.storage.node.field_founded
-    - field.storage.node.field_total_score
-    - node.type.team_profile
+    - core.entity_view_mode.node.teaser
+    - field.storage.node.body
+    - field.storage.node.field_boolean_field
+    - field.storage.node.field_image_field
+    - image.style.medium
+    - node.type.test_fields
   module:
-    - datetime
+    - image
     - node
+    - options
+    - text
     - user
-id: team_view
-label: 'Team View'
+id: testing_view
+label: 'Testing View'
 module: views
 description: ''
 tag: ''
@@ -82,10 +86,9 @@ display:
           description: ''
           columns:
             title: title
-            field_batsman_in_team: field_batsman_in_team
-            field_founded: field_founded
-            field_player_reference: field_player_reference
-            field_total_score: field_total_score
+            body: body
+            field_boolean_field: field_boolean_field
+            field_image_field: title
           info:
             title:
               sortable: false
@@ -94,24 +97,21 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_batsman_in_team:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_founded:
+            body:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_player_reference:
+            field_boolean_field:
+              sortable: false
+              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_total_score:
+            field_image_field:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -121,21 +121,127 @@ display:
           default: '-1'
           empty_table: false
       row:
-        type: fields
+        type: 'entity:node'
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          view_mode: teaser
       fields:
         title:
           id: title
           table: node_field_data
           field: title
+          entity_type: node
+          entity_field: title
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          settings:
+            link_to_entity: true
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Team Name'
+          exclude: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        body:
+          id: body
+          table: node__body
+          field: body
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Body
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 200
+            word_boundary: true
+            ellipsis: true
+            more_link: true
+            more_link_text: 'read more'
+            more_link_path: 'node/{{ nid }} '
+            strip_tags: false
+            trim: true
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_boolean_field:
+          id: field_boolean_field
+          table: node__field_boolean_field
+          field: field_boolean_field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Boolean field'
           exclude: false
           alter:
             alter_text: false
@@ -155,8 +261,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -177,9 +283,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: boolean
           settings:
-            link_to_entity: true
+            format: default
+            format_custom_true: ''
+            format_custom_false: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -190,17 +298,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
           plugin_id: field
-        field_batsman_in_team:
-          id: field_batsman_in_team
-          table: node__field_batsman_in_team
-          field: field_batsman_in_team
+        field_image_field:
+          id: field_image_field
+          table: node__field_image_field
+          field: field_image_field
           relationship: none
           group_type: group
           admin_label: ''
-          label: Batsman
+          label: 'Image Field'
           exclude: false
           alter:
             alter_text: false
@@ -242,138 +348,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_label
+          type: image
           settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_founded:
-          id: field_founded
-          table: node__field_founded
-          field: field_founded
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Founded
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: html_date
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_total_score:
-          id: field_total_score
-          table: node__field_total_score
-          field: field_total_score
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Total Score'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: value
+            image_style: medium
+            image_link: content
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -400,26 +379,39 @@ display:
           id: type
           table: node_field_data
           field: type
+          value:
+            test_fields: test_fields
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_list_field_value:
+          id: field_list_field_value
+          table: node__field_list_field
+          field: field_list_field_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
-          value:
-            team_profile: team_profile
+          operator: or
+          value: {  }
           group: 1
-          exposed: false
+          exposed: true
           expose:
-            operator_id: ''
-            label: ''
+            operator_id: field_list_field_value_op
+            label: 'List Field (field_list_field)'
             description: ''
             use_operator: false
-            operator: ''
-            identifier: ''
+            operator: field_list_field_value_op
+            identifier: field_list_field_value
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              batsman: '0'
+              bowler: '0'
+              captain: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -433,41 +425,89 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-      sorts:
-        field_total_score_value:
-          id: field_total_score_value
-          table: node__field_total_score
-          field: field_total_score_value
+          reduce_duplicates: false
+          plugin_id: list_field
+        field_list_float_field_value:
+          id: field_list_float_field_value
+          table: node__field_list_float_field
+          field: field_list_float_field_value
           relationship: none
           group_type: group
           admin_label: ''
+          operator: or
+          value:
+            3: '3'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_list_float_field_value_op
+            label: 'List float field (field_list_float_field)'
+            description: ''
+            use_operator: false
+            operator: field_list_float_field_value_op
+            identifier: field_list_float_field_value
+            required: false
+            remember: true
+            multiple: true
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: '0'
+              batsman: '0'
+              bowler: '0'
+              captain: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
           order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
-      title: 'Team View'
+          granularity: second
+      title: 'Testing View'
       header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_batsman_in_team'
-        - 'config:field.storage.node.field_founded'
-        - 'config:field.storage.node.field_total_score'
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_boolean_field'
+        - 'config:field.storage.node.field_image_field'
   page_1:
     display_plugin: page
     id: page_1
@@ -475,16 +515,18 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: team-view
+      path: testing-view
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_batsman_in_team'
-        - 'config:field.storage.node.field_founded'
-        - 'config:field.storage.node.field_total_score'
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_boolean_field'
+        - 'config:field.storage.node.field_image_field'

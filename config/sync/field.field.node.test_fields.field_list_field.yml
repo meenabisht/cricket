@@ -1,0 +1,21 @@
+uuid: 886b285d-e9c4-4d68-9ead-e128a9cc63ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_list_field
+    - node.type.test_fields
+  module:
+    - options
+id: node.test_fields.field_list_field
+field_name: field_list_field
+entity_type: node
+bundle: test_fields
+label: 'List Field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

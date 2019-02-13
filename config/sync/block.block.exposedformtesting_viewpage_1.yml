@@ -1,0 +1,23 @@
+uuid: d81700d8-099c-42ff-9b71-0381b902770c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.testing_view
+  module:
+    - views
+  theme:
+    - drupal8_zymphonies_theme
+id: exposedformtesting_viewpage_1
+theme: drupal8_zymphonies_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:testing_view-page_1'
+settings:
+  id: 'views_exposed_filter_block:testing_view-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility: {  }

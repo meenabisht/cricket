@@ -1,0 +1,33 @@
+uuid: b4afa43e-0f25-4351-b95c-a99c349ea84d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_list_float_field
+field_name: field_list_float_field
+entity_type: node
+type: list_float
+settings:
+  allowed_values:
+    -
+      value: !!float 1
+      label: yellow
+    -
+      value: !!float 2
+      label: green
+    -
+      value: !!float 3
+      label: blue
+    -
+      value: !!float 4
+      label: white
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

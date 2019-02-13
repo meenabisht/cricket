@@ -1,0 +1,8 @@
+uuid: c60924b4-c109-4b33-b41e-90d6f3862767
+langcode: en
+status: true
+dependencies: {  }
+id: test_comment
+label: 'Test Comment'
+target_entity_type_id: node
+description: 'This is for testing the comment and making a new comment type.'
