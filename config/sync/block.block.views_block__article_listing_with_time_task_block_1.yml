@@ -1,0 +1,31 @@
+uuid: bc8b4e67-d85f-4a03-908b-3bcb383ca1f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.article_listing_with_time_task
+  module:
+    - system
+    - views
+  theme:
+    - drupal8_zymphonies_theme
+id: views_block__article_listing_with_time_task_block_1
+theme: drupal8_zymphonies_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:article_listing_with_time_task-block_1'
+settings:
+  id: 'views_block:article_listing_with_time_task-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

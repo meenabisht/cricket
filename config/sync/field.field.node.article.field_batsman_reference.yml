@@ -1,0 +1,33 @@
+uuid: 6e03eed7-b2ec-4043-90d3-0a5b5c00c5cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_batsman_reference
+    - node.type.article
+id: node.article.field_batsman_reference
+field_name: field_batsman_reference
+entity_type: node
+bundle: article
+label: 'Batsman Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        batsman: batsman
+        administrator: '0'
+        bowler: '0'
+        captain: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference
