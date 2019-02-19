@@ -1,0 +1,9 @@
+uuid: 70f82605-5c25-4449-9a56-6e396515d8ea
+langcode: en
+status: true
+dependencies: {  }
+name: Chinese
+vid: chinese
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,21 @@
+uuid: 51073171-40c9-42ab-8e29-594c474f0a4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingredients
+    - node.type.recipes
+  module:
+    - text
+id: node.recipes.field_ingredients
+field_name: field_ingredients
+entity_type: node
+bundle: recipes
+label: Ingredients
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

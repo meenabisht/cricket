@@ -9,7 +9,7 @@ _core:
 id: drupal8_zymphonies_theme_local_tasks
 theme: drupal8_zymphonies_theme
 region: auto_hidden_block
-weight: 0
+weight: -7
 provider: null
 plugin: local_tasks_block
 settings:

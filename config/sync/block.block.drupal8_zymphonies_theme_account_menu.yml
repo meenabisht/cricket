@@ -12,8 +12,8 @@ _core:
   default_config_hash: _nAXC7GnTksGBQGHa4izzWtjiIB4BmokhG3r2X69Ew8
 id: drupal8_zymphonies_theme_account_menu
 theme: drupal8_zymphonies_theme
-region: auto_hidden_block
-weight: 11
+region: footer_menu
+weight: -7
 provider: null
 plugin: 'system_menu_block:account'
 settings:

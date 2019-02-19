@@ -1,0 +1,33 @@
+uuid: 1e853069-f474-4c54-9a34-6a1bc5705b7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.content_recipes_view
+  module:
+    - node
+    - views
+  theme:
+    - drupal8_zymphonies_theme
+id: views_block__content_recipes_view_block_1
+theme: drupal8_zymphonies_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:content_recipes_view-block_1'
+settings:
+  id: 'views_block:content_recipes_view-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      recipes: recipes
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
