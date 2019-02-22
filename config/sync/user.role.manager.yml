@@ -1,0 +1,38 @@
+uuid: d3f2ed29-734e-4fd4-ae3b-8235847e8a0b
+langcode: en
+status: true
+dependencies: {  }
+id: manager
+label: Manager
+weight: 7
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access files overview'
+  - 'access in-place editing'
+  - 'administer comment form display'
+  - 'administer content types'
+  - 'administer display modes'
+  - 'administer node display'
+  - 'administer node form display'
+  - 'administer nodes'
+  - 'administer permissions'
+  - 'administer user display'
+  - 'administer user fields'
+  - 'administer views'
+  - 'administer workflows'
+  - 'bypass node access'
+  - 'create book content'
+  - 'delete any new_blog content'
+  - 'delete new_blog revisions'
+  - 'delete own new_blog content'
+  - 'edit any new_blog content'
+  - 'edit own book content'
+  - 'edit own new_blog content'
+  - 'revert new_blog revisions'
+  - 'use qed42blog transition publish'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view new_blog revisions'
+  - 'view own unpublished content'

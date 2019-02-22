@@ -1,0 +1,28 @@
+uuid: 9b8be6bc-52c6-43f8-8d20-248cf2731add
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.new_blog.body
+    - node.type.new_blog
+  module:
+    - text
+    - user
+id: node.new_blog.default
+targetEntityType: node
+bundle: new_blog
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

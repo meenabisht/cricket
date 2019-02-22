@@ -1,14 +1,11 @@
-uuid: 3ce8c6d5-2767-4a5e-9158-cd065a65e9f4
+uuid: de9db88e-86d8-46d3-8261-45d78cd006da
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_debut_match
-    - field.storage.node.field_debut_year
     - field.storage.node.field_player_image
     - node.type.players_details
   module:
-    - datetime
     - image
     - node
     - user
@@ -83,16 +80,8 @@ display:
           description: ''
           columns:
             title: title
-            field_player_image: field_player_image
           info:
             title:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_player_image:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -113,38 +102,27 @@ display:
           id: title
           table: node_field_data
           field: title
+          entity_type: node
+          entity_field: title
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          settings:
+            link_to_entity: true
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Player Name'
           exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: false
-            ellipsis: false
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -154,13 +132,9 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
-          empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings:
-            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -171,9 +145,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_player_image:
           id: field_player_image
           table: node__field_player_image
@@ -181,7 +152,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Player Images'
+          label: 'Player Image'
           exclude: false
           alter:
             alter_text: false
@@ -214,7 +185,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -226,135 +197,8 @@ display:
           type: image
           settings:
             image_style: ''
-            image_link: content
+            image_link: ''
           group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_debut_match:
-          id: field_debut_match
-          table: node__field_debut_match
-          field: field_debut_match
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Debut Match'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_debut_year:
-          id: field_debut_year
-          table: node__field_debut_year
-          field: field_debut_year
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Debut Year'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: html_date
-          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -418,17 +262,30 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_debut_match'
-        - 'config:field.storage.node.field_debut_year'
         - 'config:field.storage.node.field_player_image'
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: Tab1Page
     position: 1
     display_options:
       display_extenders: {  }
       path: players-view
+      display_description: ''
+      menu:
+        type: 'default tab'
+        title: Tab1page
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      tab_options:
+        type: none
+        title: ''
+        description: ''
+        weight: 0
     cache_metadata:
       max-age: -1
       contexts:
@@ -438,6 +295,58 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_debut_match'
-        - 'config:field.storage.node.field_debut_year'
+        - 'config:field.storage.node.field_player_image'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: Tab2Page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: players-view/Tab2page
+      display_description: ''
+      menu:
+        type: tab
+        title: Tab2page
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      tab_options:
+        type: none
+        title: ''
+        description: ''
+        weight: 0
+      style:
+        type: grid
+        options:
+          grouping: {  }
+          columns: 3
+          automatic_width: true
+          alignment: horizontal
+          col_class_default: true
+          col_class_custom: ''
+          row_class_default: true
+          row_class_custom: ''
+      defaults:
+        style: false
+        row: false
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
         - 'config:field.storage.node.field_player_image'

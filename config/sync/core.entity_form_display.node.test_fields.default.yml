@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.test_fields.field_boolean_field
     - field.field.node.test_fields.field_comment_field
     - field.field.node.test_fields.field_content_reference
+    - field.field.node.test_fields.field_cuisine_reference
     - field.field.node.test_fields.field_file_reference
     - field.field.node.test_fields.field_image_field
     - field.field.node.test_fields.field_link_field
@@ -59,6 +60,15 @@ content:
     region: content
   field_content_reference:
     weight: 126
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_cuisine_reference:
+    weight: 133
     settings:
       match_operator: CONTAINS
       size: 60

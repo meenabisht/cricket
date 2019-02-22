@@ -1,0 +1,20 @@
+uuid: ef4e0e4d-2c44-4e20-87a2-52d7ba854abb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_cuisine_reference
+field_name: field_cuisine_reference
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

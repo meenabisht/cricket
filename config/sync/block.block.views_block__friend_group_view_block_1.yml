@@ -1,0 +1,31 @@
+uuid: 82c5a0bb-ad93-45e4-84c0-c6136f757e32
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.friend_group_view
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__friend_group_view_block_1
+theme: bartik
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'views_block:friend_group_view-block_1'
+settings:
+  id: 'views_block:friend_group_view-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

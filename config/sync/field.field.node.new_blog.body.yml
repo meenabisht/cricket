@@ -1,0 +1,22 @@
+uuid: a06b2585-c5c5-4b6e-9dbc-18715f9da88f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.new_blog
+  module:
+    - text
+id: node.new_blog.body
+field_name: body
+entity_type: node
+bundle: new_blog
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

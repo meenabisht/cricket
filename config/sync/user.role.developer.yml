@@ -1,0 +1,34 @@
+uuid: 3afba851-f4a0-4827-90d2-da241aa04a2a
+langcode: en
+status: true
+dependencies: {  }
+id: developer
+label: Developer
+weight: 8
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access files overview'
+  - 'access in-place editing'
+  - 'administer content types'
+  - 'administer nodes'
+  - 'administer permissions'
+  - 'administer user fields'
+  - 'administer views'
+  - 'administer workflows'
+  - 'bypass node access'
+  - 'create new_blog content'
+  - 'delete all revisions'
+  - 'delete any new_blog content'
+  - 'delete new_blog revisions'
+  - 'delete own new_blog content'
+  - 'edit any new_blog content'
+  - 'edit own new_blog content'
+  - 'revert all revisions'
+  - 'revert new_blog revisions'
+  - 'use qed42blog transition create_new_draft'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view new_blog revisions'
+  - 'view own unpublished content'

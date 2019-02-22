@@ -6,13 +6,16 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_batsman_reference
+    - field.field.node.article.field_gallery_media
     - field.field.node.article.field_image
+    - field.field.node.article.field_media_video
     - field.field.node.article.field_tags
     - image.style.thumbnail
     - node.type.article
   module:
     - comment
     - image
+    - media_library
     - path
     - text
 _core:
@@ -52,6 +55,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_gallery_media:
+    type: media_library_widget
+    weight: 123
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_image:
     type: image_image
     weight: 4
@@ -60,6 +69,12 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_media_video:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 3
@@ -69,6 +84,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  moderation_state:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
     weight: 30

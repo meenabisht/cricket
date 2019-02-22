@@ -1,22 +1,22 @@
-uuid: 52d24b00-6dc2-4cf1-a33c-52600c6d6ba7
+uuid: 6e2d35cf-f476-4edd-b4bc-f353de27f6e3
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.recipes_content_view
+    - views.view.cusinine_test_view
   module:
     - node
     - views
   theme:
     - drupal8_zymphonies_theme
-id: views_block__recipes_content_view_block_1
+id: views_block__cusinine_test_view_block_1
 theme: drupal8_zymphonies_theme
 region: sidebar_first
 weight: 0
 provider: null
-plugin: 'views_block:recipes_content_view-block_1'
+plugin: 'views_block:cusinine_test_view-block_1'
 settings:
-  id: 'views_block:recipes_content_view-block_1'
+  id: 'views_block:cusinine_test_view-block_1'
   label: ''
   provider: views
   label_display: visible
@@ -27,7 +27,7 @@ visibility:
   node_type:
     id: node_type
     bundles:
-      recipes: recipes
+      test_fields: test_fields
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'

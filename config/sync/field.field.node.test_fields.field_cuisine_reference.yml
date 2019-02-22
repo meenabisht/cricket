@@ -1,0 +1,29 @@
+uuid: b1033208-1a1f-40d3-bd41-316fb9668a81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cuisine_reference
+    - node.type.test_fields
+    - taxonomy.vocabulary.cuisine
+id: node.test_fields.field_cuisine_reference
+field_name: field_cuisine_reference
+entity_type: node
+bundle: test_fields
+label: 'Cuisine Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cuisine: cuisine
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
