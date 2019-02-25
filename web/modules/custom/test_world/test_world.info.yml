@@ -1,0 +1,4 @@
+name: Test World
+description: This is the test custom module.
+type: module
+core: '8.x'
