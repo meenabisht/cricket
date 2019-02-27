@@ -5,24 +5,20 @@ namespace Drupal\test_world\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-class TestWorldConfigForm extends ConfigFormBase {
+class TestSiteInformationForm extends ConfigFormBase {
 
   public function getFormId() {
-      return 'test_World';
+      return 'test_World_site_form';
     }
 
   protected function getEditableConfigNames() {
     return [
-      'test_world.settings'
+      'test_world_site.settings'
     ];
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('test_world.settings');
-    // kint($config->get('name'));
-    // kint($config->get('gender'));
-    // kint($config->get('confirm'));
-
+    $config = $this->config('test_world_site.settings');
 
     $form['your_name'] = [
       '#type' => 'textfield',
@@ -62,7 +58,7 @@ class TestWorldConfigForm extends ConfigFormBase {
   }
 
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    $config = $this->config('test_world.settings');
+    $config = $this->config('test_world_site.settings');
     // kint($config);
     // exit();
     $values = $form_state->getValues();
@@ -80,7 +76,7 @@ class TestWorldConfigForm extends ConfigFormBase {
     kint($values);
 
     // Save the settings.
-    $this->config('test_world.settings')
+    $this->config('test_world_site.settings')
       ->set('name', $form_state->getValue('your_name'))
       ->set('gender', $form_state->getValue('your_gender'))
       ->set('confirm', $form_state->getValue('your_confirmation'))

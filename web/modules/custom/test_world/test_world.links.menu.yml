@@ -1,0 +1,13 @@
+test_world.test_menu:
+  title: 'Test module settings'
+  description: 'example of how to make an admin settings page link'
+  parent: system.admin_config
+  route_name: test_world.test_menu
+
+test_world.site_information:
+  title: 'Test site settings'
+  parent: test_world.test_menu
+  description: 'Change site name, email address, slogan, default front page, and error pages.'
+  route_name: test_world.site_information
+
+  
